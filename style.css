@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=IBM+Plex+Sans+Thai+Looped&family=Montserrat&family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+
+.container{
+    display: flex;
+   justify-content: center;
+}
+
+#Increment,#Decrement,#Reset{
+    padding: 1rem;
+    margin: 1rem; 
+    
+}
+
+#view{
+    text-align: center;
+    padding: 1rem;
+     font-weight: bolder;
+
+}
+
+.name{
+    text-align: center  ;
+     padding: 1.5rem;
+    margin: 1rem;
+    font-weight: bolder;
+}
