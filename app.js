@@ -1,31 +1,38 @@
-let btn1 = document.querySelector("#Increment")
+//setting intial value 
+let count = 0;
 
-let btn2 = document.querySelector("#Decrement")
+//selecting value
 
-let btn3 = document.querySelector("#Reset")
+const value = document.querySelector("#value");
 
-let view = document.querySelector("#view")
+//select all 3 buttons at the same time
+const btns = document.querySelectorAll(".btn");
 
 
-view.textContent = initialValue = 0
+btns.forEach(function (btn) {
 
-btn3.addEventListener("click", function clickHandler3() {
-    view.textContent = initialValue = 0
-    document.getElementById("view").style.color = "black"
+    btn.addEventListener("click", function (event) {
+        let selectingBtn = (event.currentTarget.classList);
+        if (selectingBtn.contains("increase")) {
+            count++
+            if (count > 0) {
+                value.style.color = 'green'
+            }
+            value.textContent = count;
+        } else if (selectingBtn.contains("decrease")) {
+            count--
+            if (count < 0) {
+                value.style.color = 'red'
+            }
+            value.textContent = count;
 
-})
+        } else if (selectingBtn.contains("reset")) {
+            count = 0
+            if (count === 0) {
+                value.style.color = 'black'
+            }
+            value.textContent = count;
+        }
+    })
 
-btn1.addEventListener("click", function clickHandler() {
-    view.textContent = initialValue = initialValue + 1
-    if (initialValue === +1) {
-        document.getElementById("view").style.color = "green"
-    }
-})
-
-btn2.addEventListener("click", function clickHandler2() {
-
-    view.textContent = initialValue = initialValue - 1
-    if (initialValue === -1) {
-        document.getElementById("view").style.color = "red"
-    }
 })
