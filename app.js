@@ -1,3 +1,17 @@
+//click sounds
+
+let audio = document.getElementById("audio")
+let audio2 = document.getElementById("audio2")
+
+
+function sound(){
+    audio.play();
+}
+
+function reset(){
+    audio2.play();
+}
+
 //setting intial value 
 let count = 0;
 
